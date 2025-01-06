@@ -2,8 +2,8 @@
 Author: frank 13121950875@163.com
 Date: 2024-12-24 00:12:37
 LastEditors: frank 13121950875@163.com
-LastEditTime: 2024-12-24 00:37:15
-FilePath: /study-note/study_note/tdx/read_fq_data.py
+LastEditTime: 2025-01-06 23:11:29
+FilePath: /study-note/study_note/tdx/test/read_fq_data.py
 Description: 
 
 读取复权数据
@@ -30,8 +30,8 @@ client = Quotes.factory(market='std')
 client.bars(symbol='600036', frequency=9, offset=10)
 
 # 前复权
-data = client.bars(symbol='600036', adjust='qfq')
+data = client.bars(symbol='600036', adjust='qfq', offset=10, start=0)
 print(data)
-# 后复权
-data  = client.bars(symbol='600036', adjust='hfq')
-print(data)
+# # 后复权
+# data  = client.bars(symbol='600036', adjust='hfq')
+# print(data)
